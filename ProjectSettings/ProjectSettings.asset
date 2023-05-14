@@ -135,9 +135,7 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleVersion: 0.1
-  preloadedAssets:
-  - {fileID: -6577311564178739184, guid: 05c873f1b315a9447b4ba0a4dc770913, type: 2}
-  - {fileID: 2102451422629222608, guid: 2c70e9823938e224fab8c1dddf10bb4d, type: 2}
+  preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -823,13 +821,13 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Template3D
+  metroPackageName: FarmCV
   metroPackageVersion: 1.0.0.0
-  metroCertificatePath: 
+  metroCertificatePath: C:\Users\A\Desktop\Farm_CV\Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: Farm_CV
+  metroCertificateIssuer: Farm_CV
+  metroCertificateNotAfter: 80dfff6478a5da01
   metroApplicationDescription: Template_3D
   wsaImages: {}
   metroTileShortName: Farm
