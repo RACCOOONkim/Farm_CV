@@ -20,7 +20,7 @@ public class StatePaprika : MonoBehaviour
 
     private void Start()
     {
-        // 초기 상태에 따라 오브젝트를 활성화합니다.
+        // 초기 상태에 따라 오브젝트를 활성화
         UpdateObjectActivation();
     }
 
@@ -57,13 +57,13 @@ public class StatePaprika : MonoBehaviour
 
     private void UpdateObjectActivation()
     {
-        // 모든 오브젝트를 비활성화합니다.
+        // 모든 오브젝트를 비활성화
         greenObject.SetActive(false);
         growingObject.SetActive(false);
         redObject.SetActive(false);
         rottenObject.SetActive(false);
 
-        // 현재 상태에 따라 해당하는 오브젝트를 활성화합니다.
+        // 현재 상태에 따라 해당하는 오브젝트를 활성화
         switch (currentState)
         {
             case PaprikaState.Green:
@@ -84,7 +84,7 @@ public class StatePaprika : MonoBehaviour
         }
     }
 
-    // 상태 변경을 처리하는 함수입니다.
+    // 상태 변경을 처리하는 함수입
     public void ChangeState(PaprikaState newState)
     {
         currentState = newState;
