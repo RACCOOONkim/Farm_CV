@@ -94,25 +94,27 @@ public class StatePaprika : MonoBehaviour
     }
 
     // 해당 상태 조건 충족 여부 확인
-    private bool IsGreen()
+    private bool IsGreen()/*습도(Humid)가 80% 이상이고 전기 전도도(EC)가 4 dS/m 이상인 경우: 초록색(green)
+                            온도(Temperature)가 25°C 이상이고 습도(Humid)가 70% 이상인 경우: 초록색(green)*/
     {
         DataDisplay.DataEntry dataEntry = GetComponent<DataDisplay>().dataEntries[GetComponent<DataDisplay>().currentIndex];
         return dataEntry.temperature > 25f && dataEntry.humidity > 70f;
     }
 
-    private bool IsGrowing()
+    private bool IsGrowing() /*그 외의 경우: 성장 중(growing) = default*/
     {
         DataDisplay.DataEntry dataEntry = GetComponent<DataDisplay>().dataEntries[GetComponent<DataDisplay>().currentIndex];
         return !IsGreen() && !IsRed() && !IsRotten();
     }
 
-    private bool IsRed()
+    private bool IsRed()/*이산화탄소 농도(CO2)가 500 ppm 이상인 경우: 빨간색(red)*/
     {
         DataDisplay.DataEntry dataEntry = GetComponent<DataDisplay>().dataEntries[GetComponent<DataDisplay>().currentIndex];
         return dataEntry.co2 > 500f;
     }
 
-    private bool IsRotten()
+    private bool IsRotten() /*토양 온도(SoilTemperature)가 20°C 미만이거나 30°C 이상인 경우: 썩은(rotten),
+                                토양 습도(SoilMoisture)가 10% 미만인 경우: 썩은(rotten)*/
     {
         DataDisplay.DataEntry dataEntry = GetComponent<DataDisplay>().dataEntries[GetComponent<DataDisplay>().currentIndex];
         return dataEntry.soilTemperature < 20f || dataEntry.soilTemperature > 30f || dataEntry.soilMoisture < 10f;
