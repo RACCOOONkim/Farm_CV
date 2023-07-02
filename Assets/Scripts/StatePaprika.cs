@@ -20,50 +20,52 @@ public class StatePaprika : MonoBehaviour
 
     private void Start()
     {
-        // 초기 상태에 따라 오브젝트를 활성화
+        // 초기 상태에 따라 객체 활성화
         UpdateObjectActivation();
     }
 
     private void Update()
     {
-        elapsedTime += Time.deltaTime;
-
-        // 10초마다 상태 변경
-        if (elapsedTime >= 10f)
+        // 현재 상태에 따라 다음 상태로 변경
+        switch (currentState)
         {
-            elapsedTime = 0f;
-
-            // 현재 상태에 따라 다음 상태로 변경
-            switch (currentState)
-            {
-                case PaprikaState.Green:
-                    ChangeState(PaprikaState.Growing);
-                    break;
-
-                case PaprikaState.Growing:
-                    ChangeState(PaprikaState.Red);
-                    break;
-
-                case PaprikaState.Red:
+            case PaprikaState.Green:
+                if (IsRotten())
                     ChangeState(PaprikaState.Rotten);
-                    break;
+                else if (IsGrowing())
+                    ChangeState(PaprikaState.Growing);
+                break;
 
-                case PaprikaState.Rotten:
+            case PaprikaState.Growing:
+                if (IsRotten())
+                    ChangeState(PaprikaState.Rotten);
+                else if (IsRed())
+                    ChangeState(PaprikaState.Red);
+                break;
+
+            case PaprikaState.Red:
+                if (IsRotten())
+                    ChangeState(PaprikaState.Rotten);
+                else if (IsGreen())
                     ChangeState(PaprikaState.Green);
-                    break;
-            }
+                break;
+
+            case PaprikaState.Rotten:
+                if (IsGreen())
+                    ChangeState(PaprikaState.Green);
+                break;
         }
     }
 
     private void UpdateObjectActivation()
     {
-        // 모든 오브젝트를 비활성화
+        // 모든 객체 비활성화
         greenObject.SetActive(false);
         growingObject.SetActive(false);
         redObject.SetActive(false);
         rottenObject.SetActive(false);
 
-        // 현재 상태에 따라 해당하는 오브젝트를 활성화
+        // 현재 상태에 따라 해당하는 객체 활성화
         switch (currentState)
         {
             case PaprikaState.Green:
@@ -84,10 +86,35 @@ public class StatePaprika : MonoBehaviour
         }
     }
 
-    // 상태 변경을 처리하는 함수입
+    // 상태 변경 처리 함수
     public void ChangeState(PaprikaState newState)
     {
         currentState = newState;
         UpdateObjectActivation();
+    }
+
+    // 해당 상태 조건 충족 여부 확인
+    private bool IsGreen()
+    {
+        DataDisplay.DataEntry dataEntry = GetComponent<DataDisplay>().dataEntries[GetComponent<DataDisplay>().currentIndex];
+        return dataEntry.temperature > 25f && dataEntry.humidity > 70f;
+    }
+
+    private bool IsGrowing()
+    {
+        DataDisplay.DataEntry dataEntry = GetComponent<DataDisplay>().dataEntries[GetComponent<DataDisplay>().currentIndex];
+        return !IsGreen() && !IsRed() && !IsRotten();
+    }
+
+    private bool IsRed()
+    {
+        DataDisplay.DataEntry dataEntry = GetComponent<DataDisplay>().dataEntries[GetComponent<DataDisplay>().currentIndex];
+        return dataEntry.co2 > 500f;
+    }
+
+    private bool IsRotten()
+    {
+        DataDisplay.DataEntry dataEntry = GetComponent<DataDisplay>().dataEntries[GetComponent<DataDisplay>().currentIndex];
+        return dataEntry.soilTemperature < 20f || dataEntry.soilTemperature > 30f || dataEntry.soilMoisture < 10f;
     }
 }
