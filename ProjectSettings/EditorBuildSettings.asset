@@ -5,16 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Final_4_Scenes/FarmScene_Start.unity
     guid: 880c3fcce4aa58e46b571ec8202a69f5
   - enabled: 1
     path: Assets/Scenes/Final_4_Scenes/Scene1.unity
     guid: 3cd12a1f420c201468568f2a16b9c72e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Final_4_Scenes/Scene2.unity
     guid: 3819091b5c6b39b45a29a7856a580a25
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Final_4_Scenes/Scene3.unity
     guid: 959323e4edd904e409941f0da4ea153c
   m_configObjects:
