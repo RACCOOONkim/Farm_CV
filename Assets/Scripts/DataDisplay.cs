@@ -25,7 +25,7 @@ public class DataDisplay : MonoBehaviour
     {
         timer += Time.deltaTime; // 타이머 업데이트
 
-        if (timer >= 5f) // 5초마다 실행
+        if (timer >= 10f) // 5초마다 실행
         {
             timer = 0f; // 타이머 재설정
             DisplayNextData(); // 다음 데이터 표시
