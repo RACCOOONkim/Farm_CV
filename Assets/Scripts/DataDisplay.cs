@@ -13,19 +13,24 @@ public class DataDisplay : MonoBehaviour
     public List<DataEntry> dataEntries; // 데이터 항목의 목록
     public int currentIndex; // 현재 인덱스
     private float timer; // 타이머
+    public float intervalTime = 5f; ///
+
+
 
     public void Start()
     {
+
         LoadDataFromCSV(); // .csv 데이터 불러오기
         currentIndex = 0; // 초기 인덱스 설정
         timer = 0f; // 타이머 초기화
+        
     }
 
     public void Update()
     {
         timer += Time.deltaTime; // 타이머 업데이트
-
-        if (timer >= 10f) // 5초마다 실행
+        
+        if (timer >= intervalTime) // 5초마다 실행
         {
             timer = 0f; // 타이머 재설정
             DisplayNextData(); // 다음 데이터 표시

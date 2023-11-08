@@ -3674,6 +3674,7 @@ MonoBehaviour:
   csvData: {fileID: 4900000, guid: 5ef3e2299b7a5424e9edffdba19c155a, type: 3}
   dataText: {fileID: 366212321}
   currentIndex: 0
+  intervalTime: 5
 --- !u!114 &366212321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6136,8 +6137,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6379754230260484954, guid: 40b588bd40632eb41a0af374d91c4fc9, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6379754230260484954, guid: 40b588bd40632eb41a0af374d91c4fc9, type: 3}
+      propertyPath: interactableObject
+      value: 
+      objectReference: {fileID: 1768374488}
+    - target: {fileID: 6379754230260484954, guid: 40b588bd40632eb41a0af374d91c4fc9, type: 3}
+      propertyPath: visualizationObject
+      value: 
+      objectReference: {fileID: 761165088}
+    - target: {fileID: 6379754230260484954, guid: 40b588bd40632eb41a0af374d91c4fc9, type: 3}
+      propertyPath: autoFollowTransformTarget
+      value: 
+      objectReference: {fileID: 8605368845815747874}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40b588bd40632eb41a0af374d91c4fc9, type: 3}
 --- !u!1001 &643658304
@@ -8212,7 +8225,7 @@ MonoBehaviour:
   maintainScaleOnInitialization: 1
   smoothing: 1
   lifetime: 0
-  DirectionalTarget: {fileID: 0}
+  DirectionalTarget: {fileID: 1201286802}
   MinIndicatorScale: 0.05
   MaxIndicatorScale: 0.2
   VisibilityScaleFactor: 0.8
@@ -12549,6 +12562,7 @@ MonoBehaviour:
   csvData: {fileID: 4900000, guid: 5ef3e2299b7a5424e9edffdba19c155a, type: 3}
   dataText: {fileID: 366212321}
   currentIndex: 0
+  intervalTime: 5
 --- !u!4 &1330043702
 Transform:
   m_ObjectHideFlags: 0
@@ -13823,6 +13837,7 @@ MonoBehaviour:
   co2TextUI: {fileID: 272587774}
   dataDisplay: {fileID: 1330043701}
   progressBar: {fileID: 1621582310}
+  updateInterval: 5
 --- !u!114 &1441325659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16365,6 +16380,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8341343349471309863, guid: f21bca7ad7f9ac348b1aad095cd95f2b, type: 3}
   m_PrefabInstance: {fileID: 1739690844}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1768374488 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5656867131449373698, guid: 40b588bd40632eb41a0af374d91c4fc9, type: 3}
+  m_PrefabInstance: {fileID: 628819969}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1410eac1ae94b4d4492a09cc368e152c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1768804045
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ public class DataMangerCO2 : MonoBehaviour
     private float minCO2 = 0f; // 최소 CO2 값 설정
     private float maxCO2 = 1000f; // 최대 CO2 값 설정
 
-    private float updateInterval = 5f; // 데이터 업데이트 간격 (1초)
+    public float updateInterval = 5f; // 
     private float timer = 0f;
 
     void Start()
@@ -24,8 +24,9 @@ public class DataMangerCO2 : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer >= updateInterval)
+        if (timer >= dataDisplay.intervalTime)
         {
+            
             UpdateCO2Text();
             UpdateProgressBar();
             timer = 0f;

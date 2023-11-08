@@ -1735,7 +1735,7 @@ GameObject:
   - component: {fileID: 169444936}
   - component: {fileID: 169444935}
   m_Layer: 0
-  m_Name: MixedRealityToolkit
+  m_Name: MixedRealityToolkit (Inactive)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3714,6 +3714,7 @@ MonoBehaviour:
   co2TextUI: {fileID: 1921915025}
   dataDisplay: {fileID: 1330043701}
   progressBar: {fileID: 1921915026}
+  updateInterval: 5
 --- !u!114 &319293041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4345,6 +4346,7 @@ MonoBehaviour:
   csvData: {fileID: 4900000, guid: 5ef3e2299b7a5424e9edffdba19c155a, type: 3}
   dataText: {fileID: 366212321}
   currentIndex: 0
+  intervalTime: 5
 --- !u!114 &366212321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5722,7 +5724,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &508349708
 Transform:
   m_ObjectHideFlags: 0
@@ -8993,7 +8995,7 @@ MonoBehaviour:
   maintainScaleOnInitialization: 1
   smoothing: 1
   lifetime: 0
-  DirectionalTarget: {fileID: 0}
+  DirectionalTarget: {fileID: 1201286802}
   MinIndicatorScale: 0.05
   MaxIndicatorScale: 0.2
   VisibilityScaleFactor: 0.8
@@ -14980,6 +14982,7 @@ MonoBehaviour:
   csvData: {fileID: 4900000, guid: 5ef3e2299b7a5424e9edffdba19c155a, type: 3}
   dataText: {fileID: 366212321}
   currentIndex: 0
+  intervalTime: 5
 --- !u!4 &1330043702
 Transform:
   m_ObjectHideFlags: 0
