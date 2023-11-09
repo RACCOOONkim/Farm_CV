@@ -1449,7 +1449,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Tomato-only view
+  m_text: 'Paprika-only view
 
     (Scene3)'
   m_isRightToLeft: 0
@@ -1735,7 +1735,7 @@ GameObject:
   - component: {fileID: 169444936}
   - component: {fileID: 169444935}
   m_Layer: 0
-  m_Name: MixedRealityToolkit (Inactive)
+  m_Name: MixedRealityToolkit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5724,7 +5724,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &508349708
 Transform:
   m_ObjectHideFlags: 0
@@ -11821,6 +11821,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 197831609}
+  - {fileID: 1967942083}
   m_Father: {fileID: 698407349}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13828,7 +13829,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1248539139}
-  - {fileID: 1967942083}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21316,15 +21316,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1967942082}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.165, y: 2.899, z: -5.893}
-  m_LocalScale: {x: 0.9999998, y: 0.9999998, z: 0.9999998}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: 7.860801, y: 0.015482901, z: 54.701057}
+  m_LocalScale: {x: 55.555546, y: 55.555546, z: 55.555546}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 303530634}
   - {fileID: 1366141284}
   - {fileID: 1912107916}
-  m_Father: {fileID: 1201286802}
+  m_Father: {fileID: 988223559}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1818360608 &1967942084
@@ -21337,15 +21337,13 @@ PositionConstraint:
   m_Enabled: 1
   m_Weight: 1
   m_TranslationAtRest: {x: -0.165, y: 2.899, z: -5.893}
-  m_TranslationOffset: {x: -0.16237442, y: 0.00027871132, z: 0.024460793}
+  m_TranslationOffset: {x: -0.165, y: -0.7624047, z: 0.7593808}
   m_AffectTranslationX: 1
   m_AffectTranslationY: 1
   m_AffectTranslationZ: 1
   m_IsContraintActive: 1
   m_IsLocked: 1
-  m_Sources:
-  - sourceTransform: {fileID: 0}
-    weight: 1
+  m_Sources: []
 --- !u!1 &1969313924
 GameObject:
   m_ObjectHideFlags: 0
